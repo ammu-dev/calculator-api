@@ -1,0 +1,62 @@
+#%RAML 1.0
+title: calculatorapi
+version: v1
+description: perform calculator api
+protocols:
+  - HTTP 
+  - HTTPS
+traits:
+  commonr: !include traits/common resource.raml
+  commonresponse: !include traits/common response.raml
+/addition:
+  get:
+    is: ["commonr","commonresponse"] 
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {
+                "result":"addition is sucess"
+                }
+/subraction:
+  delete:
+    is: ["commonr","commonresponse"]
+    responses:
+          200:
+            body:
+              application/json:
+                example:
+                  {
+                    "reslut":"substraction sucessful"
+                  }
+                   
+/multiplication:
+  post:
+    is: ["commonr","commonresponse"] 
+    responses:
+          200:
+            body:
+              application/json:
+                example:
+                  {
+                    "Result":"suceesfull"
+                  }
+/division:
+  post:
+    is: ["commonr","commonresponse"]
+    responses:
+          200:
+            body:
+              application/json:
+                example:
+                  {
+                    "Result":"suceesfull divison"
+                  }
+
+       
+
+       
+
+
+  
